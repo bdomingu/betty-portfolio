@@ -1,0 +1,37 @@
+.container {
+    position: relative;
+    display: flex;
+  }
+
+  
+  .container img {
+    width: 60%;
+    height: auto;
+    display: block;
+  }
+  
+  .container h1 {
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -230%);
+    color: rgb(125,80,27);
+    text-align: center;
+    font-size: 120%;
+    font-family: 'Courgette';
+    white-space: pre-wrap;
+  }
+
+  .homeImage {
+    position: relative;
+    top: -60px;
+    left: -50px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container h1 {
+      font-size: 100%;
+      width: 80%;
+    }
+  }
