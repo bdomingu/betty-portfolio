@@ -1,0 +1,23 @@
+.letterList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    height: 80vh;
+}
+  
+  .letter {
+    display: none;
+    margin: 0 0.5rem;
+    transition: transform 0.5s ease-out;
+    color: beige;
+    position: absolute;
+    top: calc(var(--random-y) * 100%);
+    left: calc(var(--random-x) * 100%);
+}
+  
+  .letterScattered {
+    animation: scatter 1s ease-out-in forwards;
+    
+}
+  

@@ -1,44 +1,26 @@
-import Layout from '@/components/layout';
+import Layout from '@/components/Layout';
 import styles from './index.module.css';
 import Link from 'next/link';
-import Head from 'next/head';
+import AlphabetSoup from '@/components/AlphabetSoup';
+
 
 
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>About Page</title>
-      <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link 
-        href="https://fonts.googleapis.com/css2?family=Courgette&family=Rubik:ital,wght@0,400;0,600;1,600&display=swap" 
-        rel="stylesheet"
-        />
-        
-    </Head>
-    
   <Layout>
-  <div className={styles.container}>
-    <img src="/images/homeImage.png" alt='home' className={styles.homeImage} />
-    <h1>
-      "The beautiful thing about learning is no one can take it away from you" -B.B King
-      </h1>
-    <ul>
-      <li>
-        <Link href='/about'>About Me</Link>
-      </li>
-      <li>
-        <Link href='/projects'>Projects</Link>
-      </li>
-      <li>
-        <Link href='/resume'>Resume</Link>
-      </li>
-    </ul>
-  </div>
+    <AlphabetSoup/>
+  {/* <div className={styles.mainContainer}>
+    <div className={styles.imageContainer}>
+      <img src='/images/betty.jpg'/>
+    </div>
+    <div className={styles.textContainer}>
+      <h4>Software Developer</h4>
+      <h1>Beatriz Dominguez</h1>
+      <p>Hey there! Welcome! My name is Beatriz and I am a Texas based Software Developer. Please feel free to explore and don't hesitate to reach out.</p>     
+    </div>
+
+  </div> */}
   </Layout>
   </>
   )
