@@ -7,41 +7,44 @@ const AlphabetSoup = () => {
   const [scattered, setScattered] = useState(false);
 
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+  const message = '"The beautiful thing about learning is nobody can take it away from you." B.B King';
 
   useEffect(() => {
-    const letters = document.querySelectorAll('.' + styles.letter ) as NodeListOf<HTMLElement>;
-    letters.forEach((letter) => {
-      const x = Math.random() * window.innerWidth * .5;
-      const y = Math.random() * window.innerHeight * .5;
-      letter.style.transform = `translate(${x}px, ${y}px)`;
-     
+    const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message) as NodeListOf<HTMLElement>;
+    const delay = 50;
+    elements.forEach((element, index) => {
+      const x = Math.random() * window.innerWidth * 1;
+      const y = Math.random() * window.innerHeight * 1;
+      element.style.transform = `translate(${x}px, ${y}px)`;
+      setTimeout(() => {
+        element.style.transition = `transform 0.5s ease-out`;
+        element.style.transform = `translate(60px, 60px)`;
+      }, (index + 1) * delay);
     });
 
    
-    setTimeout(() => {
-    letters.forEach((letter) => {
-      letter.style.transform = `translate(0, 0)`;
-    });
-  }, 500);
+  //   setTimeout(() => {
+  //     scatterLetters();
+  // }, 1000);
 
   setTimeout(() => {
-    letters.forEach(letter => {
-      letter.style.display = 'inline-block';
+    elements.forEach(element => {
+      element.style.transform = '';
     });
-  }, 1000);
+  }, 500);
  
   }, []);
 
   const scatterLetters = () => {
-    const letters = document.querySelectorAll('.' + styles.letter ) as NodeListOf<HTMLElement>;
-    letters.forEach((letter) => {
-      letter.style.setProperty('--random-x', '0');
-      letter.style.setProperty('--random-y', '0');
+    const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message ) as NodeListOf<HTMLElement>;
+    elements.forEach((element) => {
+      element.style.setProperty('--random-x', '0');
+      element.style.setProperty('--random-y', '0');
       const x = Math.random() * window.innerWidth * 1;
       const y = Math.random() * window.innerHeight * 1;
-      letter.style.setProperty('--random-x', `${x / window.innerWidth - 0.5}`);
-      letter.style.setProperty('--random-y', `${y / window.innerHeight - 0.5}`);
-      letter.classList.add(styles.letterScattered);
+      element.style.setProperty('--random-x', `${x / window.innerWidth}`);
+      element.style.setProperty('--random-y', `${y / window.innerHeight}`);
+      element.classList.add(styles.letterScattered);
     });
   };
 
@@ -55,21 +58,23 @@ const AlphabetSoup = () => {
     }
   }, [scattered]);
  
-  const resetLetters = () => {
-    const letters = document.querySelectorAll('.' + styles.letter);
+  // const resetLetters = () => {
+  //   const letters = document.querySelectorAll('.' + styles.letter);
 
-    letters.forEach((letter) => {
-      letter.classList.remove(styles.letterScattered);
-    })
-    console.log('bye')
-  }
+  //   letters.forEach((letter) => {
+  //     letter.classList.remove(styles.letterScattered);
+  //   })
+  //   console.log('bye')
+  // }
   return (
-    <div>
-      <ul className={styles.letterList}>
+    <div className={styles.elementContainer}>
+      <div className={`${styles.message}`}>{message}</div>
+      <ul className={styles.elementList}>
         {letters.map(letter => (
-          <li key={`letter-${letter}`} className={`${styles.letter} ${styles.letterHidden}`}>{letter}</li>
+          <li key={`letter-${letter}`} className={`${styles.letter}`}>{letter}</li>
         ))}
       </ul>
+      
       {/* <button onClick={scattered ? resetLetters : scatterLetters}>
           {scattered ? 'Reset' : 'Scatter'}
       </button> */}

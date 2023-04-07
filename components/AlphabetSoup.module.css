@@ -1,4 +1,5 @@
-.letterList {
+
+.elementList {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,17 +8,24 @@
 }
   
   .letter {
-    display: none;
+    display:inline-block;
     margin: 0 0.5rem;
     transition: transform 0.5s ease-out;
-    color: beige;
+    color: #CCABA2;
+    opacity: .5;
     position: absolute;
+    font-size:medium;
     top: calc(var(--random-y) * 100%);
     left: calc(var(--random-x) * 100%);
 }
   
   .letterScattered {
     animation: scatter 1s ease-out-in forwards;
+    transform: translate(var(--random-x), var(--random-y));
     
 }
-  
+
+.message {
+  font-family: monospace;
+  letter-spacing: -0.5em;
+}
