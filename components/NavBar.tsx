@@ -24,6 +24,7 @@ export default function NavBar() {
           <span className={styles.hamburgerIcon}><FontAwesomeIcon icon={faBars} size='2xl'/></span>
         </button>
         <ul className={showMenu ? styles.menuListActive : styles.menuList}>
+          <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/projects">Projects</a></li>
           <li><a href="/resume">Resume</a></li>

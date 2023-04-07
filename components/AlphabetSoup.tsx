@@ -7,8 +7,21 @@ const AlphabetSoup = () => {
   const [scattered, setScattered] = useState(false);
 
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-  const message = '"The beautiful thing about learning is nobody can take it away from you." B.B King';
+  const message = ['Beatriz Dominguez', 'Software Developer', 'Welcome! Please feel free to explore and do not hesistate to reach out.'];
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
+  const generateNewMessage = () => {
+    const quotes = [
+      '"The beautiful thing about learning is nobody can take it away from you." -B.B King'
+    ]
+  }
+  
   useEffect(() => {
     const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message) as NodeListOf<HTMLElement>;
     const delay = 50;
@@ -18,14 +31,11 @@ const AlphabetSoup = () => {
       element.style.transform = `translate(${x}px, ${y}px)`;
       setTimeout(() => {
         element.style.transition = `transform 0.5s ease-out`;
-        element.style.transform = `translate(60px, 60px)`;
+        element.style.transform = `translate(-50%, -50%)`;
       }, (index + 1) * delay);
     });
 
    
-  //   setTimeout(() => {
-  //     scatterLetters();
-  // }, 1000);
 
   setTimeout(() => {
     elements.forEach(element => {
@@ -68,7 +78,11 @@ const AlphabetSoup = () => {
   // }
   return (
     <div className={styles.elementContainer}>
-      <div className={`${styles.message}`}>{message}</div>
+      <div className={`${styles.message}`}>
+        <h2 className={styles.name}>{message[0]}</h2>
+        <h2 className={styles.title}>{message[1]}</h2>
+        <h2 className={styles.welcome}>{message[2]}</h2>
+      </div>
       <ul className={styles.elementList}>
         {letters.map(letter => (
           <li key={`letter-${letter}`} className={`${styles.letter}`}>{letter}</li>

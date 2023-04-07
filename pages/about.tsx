@@ -1,9 +1,20 @@
 import Layout from "@/components/Layout";
+import styles from './about.module.css'
 
 export default function About() {
     return (
         <Layout>
-            <h1>About Me</h1>
+        {/* <div className={styles.mainContainer}>
+        <div className={styles.imageContainer}>
+            <img src='/images/betty.jpg'/>
+        </div>
+        <div className={styles.textContainer}>
+            <h4>Software Developer</h4>
+            <h1>Beatriz Dominguez</h1>
+            <p>Hey there! Welcome! My name is Beatriz and I am a Texas based Software Developer. Please feel free to explore and don't hesitate to reach out.</p>     
+        </div>
+
+        </div> */}
             <p>Hi, I'm Betty, a software developer with a background in Mathematics and Education.
             My interest in software development began in college while pursuing my degree in mathematics.
             I took a programming class and I enjoyed the fact that I could build something and see it 
