@@ -1,13 +1,24 @@
 import { useEffect, useState } from "react";
 import styles from './AlphabetSoup.module.css';
 
-
+type Message = {
+  name: string;
+  title: string;
+  message: string;
+  isQuote: boolean;
+};
 
 const AlphabetSoup = () => {
   const [scattered, setScattered] = useState(false);
 
   const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-  const message = ['Beatriz Dominguez', 'Software Developer', 'Welcome! Please feel free to explore and do not hesistate to reach out.'];
+  const [originalMessage, setOriginalMessage] = useState<Message>({
+    name: "Beatriz Dominguez",
+    title: "Software Developer",
+    message: "Welcome! Please feel free to explore and do not hesitate to reach out.",
+    isQuote: false
+  });
+  const [message, setMessage] = useState(originalMessage);
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -17,11 +28,25 @@ const AlphabetSoup = () => {
   }, []);
 
   const generateNewMessage = () => {
-    const quotes = [
-      '"The beautiful thing about learning is nobody can take it away from you." -B.B King'
-    ]
+ const quotes = [
+    {
+      name: '',
+      title: '"The beautiful thing about learning is nobody can take it away from you." -B.B King',
+      message: '',
+      isQuote: true,
+    },
+  ];
+
+  // const randomIndex = Math.floor(Math.random() * quotes.length); */ In case i decide to add more quotes */
+  const newMessage = quotes[0];
+  setMessage(newMessage);
+
+  if (message.isQuote) {
+    setMessage(originalMessage);
   }
+};
   
+
   useEffect(() => {
     const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message) as NodeListOf<HTMLElement>;
     const delay = 50;
@@ -43,7 +68,7 @@ const AlphabetSoup = () => {
     });
   }, 500);
  
-  }, []);
+  }, [generateNewMessage]);
 
   const scatterLetters = () => {
     const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message ) as NodeListOf<HTMLElement>;
@@ -68,7 +93,39 @@ const AlphabetSoup = () => {
     }
   }, [scattered]);
  
-  // const resetLetters = () => {
+  
+  return (
+    <>
+    <div className={styles.elementContainer}>
+        <div className={`${styles.message}`}>
+          <h2 className={styles.name}>{message.name}</h2>
+          <h2 className={styles.title}>{message.title}</h2>
+          <h2 className={styles.welcome}>{message.message}</h2>
+        </div>
+        <button
+        className={styles.button}
+         onClick={() => {
+          generateNewMessage();
+          scatterLetters();
+        }}> scatter
+        </button>
+        <ul className={styles.elementList}>
+          {letters.map(letter => (
+            <li key={`letter-${letter}`} className={`${styles.letter}`}>{letter}</li>
+          ))}
+        </ul>
+
+
+      </div>
+      </>
+  );
+
+};
+
+export default AlphabetSoup;
+
+
+// const resetLetters = () => {
   //   const letters = document.querySelectorAll('.' + styles.letter);
 
   //   letters.forEach((letter) => {
@@ -76,28 +133,3 @@ const AlphabetSoup = () => {
   //   })
   //   console.log('bye')
   // }
-  return (
-    <div className={styles.elementContainer}>
-      <div className={`${styles.message}`}>
-        <h2 className={styles.name}>{message[0]}</h2>
-        <h2 className={styles.title}>{message[1]}</h2>
-        <h2 className={styles.welcome}>{message[2]}</h2>
-      </div>
-      <ul className={styles.elementList}>
-        {letters.map(letter => (
-          <li key={`letter-${letter}`} className={`${styles.letter}`}>{letter}</li>
-        ))}
-      </ul>
-      
-      {/* <button onClick={scattered ? resetLetters : scatterLetters}>
-          {scattered ? 'Reset' : 'Scatter'}
-      </button> */}
-    </div>
- 
-  );
-
-};
-
-
-
-export default AlphabetSoup;

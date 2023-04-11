@@ -1,18 +1,52 @@
 import Layout from "@/components/Layout";
+import styles from './projects.module.css'
 
 export default function Projects() {
     return (
     <Layout>
         <h1>My Projects</h1>
-        <ul>
-            <li>Teacher Portal</li>
-            <li>Todo-App</li>
-            <li>Movie Search Engine</li>
-            <li>Staking App</li>
-            <li>Weather Site</li>
-            <li>Tutoring Website</li>
-            <li>Python Adventure Game</li>
-        </ul>
+        <div className={styles.container}>
+            <div className={styles.box}>
+                <div className={styles.imgBox}>
+                    <img src="/images/weather.jpg"/>
+                </div>
+                <div className={styles.content}>
+                    <h2>Forecast with Betty</h2>
+                    <p>Simple Weather App created with React</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div className={styles.box}>
+                <div className={styles.imgBox}>
+                    <img src="/images/weather.jpg"/>
+                </div>
+                <div className={styles.content}>
+                    <h2>Forecast with Betty</h2>
+                    <p>Simple Weather App created with React</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div className={styles.box}>
+                <div className={styles.imgBox}>
+                    <img src="/images/weather.jpg"/>
+                </div>
+                <div className={styles.content}>
+                    <h2>Forecast with Betty</h2>
+                    <p>Simple Weather App created with React</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div className={styles.box}>
+                <div className={styles.imgBox}>
+                    <img src="/images/weather.jpg"/>
+                </div>
+                <div className={styles.content}>
+                    <h2>Forecast with Betty</h2>
+                    <p>Simple Weather App created with React</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
     </Layout>
     )
   }

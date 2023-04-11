@@ -19,17 +19,31 @@ export default function NavBar() {
     };
   
     return (
-      <nav>
+      <nav className={styles.nav}>
+        <div className={styles.logoContainer}>
+          <a href="/">
+            <img 
+            className={styles.logo} 
+            src='/images/initials.png' alt="Logo"
+            width={150}
+            height={50}/></a>
+        </div>
         <button className={styles.menuButton} onClick={handleClick}>
           <span className={styles.hamburgerIcon}><FontAwesomeIcon icon={faBars} size='2xl'/></span>
         </button>
+        
         <ul className={showMenu ? styles.menuListActive : styles.menuList}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/resume">Resume</a></li>
-          <li><a href="/contact">Contact</a></li>
+        <div className={styles.navContainer}>
+          <li><Link href="/about">About</Link></li>
+          <li><Link href="/projects">Projects</Link></li>          
+          <li><Link href="/resume">Resume</Link></li> 
+          <li><Link href="/contact">Contact</Link></li>          
+         
+      </div>
         </ul>
+        
+        
+      
       </nav>
     );
 }

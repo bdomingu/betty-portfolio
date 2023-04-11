@@ -1,31 +1,45 @@
 import Layout from "@/components/Layout";
+import Link from "next/link";
 import styles from './about.module.css'
 
 export default function About() {
     return (
         <Layout>
-        {/* <div className={styles.mainContainer}>
+        <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
             <img src='/images/betty.jpg'/>
         </div>
         <div className={styles.textContainer}>
-            <h4>Software Developer</h4>
-            <h1>Beatriz Dominguez</h1>
-            <p>Hey there! Welcome! My name is Beatriz and I am a Texas based Software Developer. Please feel free to explore and don't hesitate to reach out.</p>     
-        </div>
-
-        </div> */}
+            <h1>About Me</h1>
             <p>Hi, I'm Betty, a software developer with a background in Mathematics and Education.
-            My interest in software development began in college while pursuing my degree in mathematics.
-            I took a programming class and I enjoyed the fact that I could build something and see it 
-            right away. I have always been passionate about problem-solving and teaching people how to 
-            problem solve and use their critical thinking skills. While being a Mathematics Teacher for 
-            2 years, I decided to learn to program on the side. I fell in love with the endless possibilities.
+            My interest in software development began in college while pursuing my degree in mathematics. I took a programming class and I enjoyed the fact that I could build something and see it 
+            right away. However, I was set on teaching young minds. 
+            <br></br>
+            <br></br>
+            I have always been passionate about teaching people how to problem solve and use their critical thinking skills. 
+            During the pandemic, I decided to learn to program on the side. I fell in love with the endless possibilities.
             I love that with programming, you are constantly learning and always challenged and in that sense, 
-            it reminds me of mathematics. I also enjoy that I can build things for people to use. I am constantly
-            learning new things and working on improving my programming skills. I consider myself a disciplined 
-            and diligent worker, and team player, who is passionate about learning and has exceptional communication
-            skills and values.</p>
+            it reminds me of mathematics. I also enjoy that I can build things for people to use. I realized that with programming, 
+            I can use my skills to continue to help people.
+            <br></br>
+            <br></br>
+            On my spare time, I enjoy sipping on a delightful cup of coffee, cuddling with my pups, and staying fit and healthy.
+            </p>     
+            {/* <Link href="/projects" className={styles.arrowLink}>
+            <div className={styles.arrowButtonText}>Check out my Resume</div>
+            <div className={styles.arrowButton}>
+                <img src="/images/arrow.png"/>
+            </div>
+            
+            </Link> */}
+        </div>
+        
+            
+            
+      
+
+        </div>
+         
         </Layout>
     )
   }

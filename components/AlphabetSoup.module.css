@@ -9,18 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 3vw;
     height: 80vh;
 }
   
   .letter {
     display:inline-block;
-    margin: 0 0.5rem;
+    margin: 0 0.5vw;
     transition: transform 0.5s ease-out;
     color: #CCABA2;
     opacity: .5;
     position: absolute;
-    font-size:medium;
+    font-size:1.5vw;
     top: calc(var(--random-y) * 100%);
     left: calc(var(--random-x) * 100%);
 }
@@ -34,14 +34,15 @@
 .message{
   width: 50%;
   margin: 0 auto;
+  font-size: 2vw;
 }
 
 
 .name{
   color: #CCABA2;
   position: absolute;
-  font-size: 4em;
-  top: 20%;
+  font-size: 5.5vw;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -49,8 +50,8 @@
 .title{
   color: #CCABA2;
   position: absolute;
-  font-size: 2em;
-  top: 32%;
+  font-size: 2.5vw;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -58,9 +59,24 @@
 .welcome {
   color: #CCABA2;
   position: absolute;
-  font-size: 1em;
-  top: 40%;
+  font-size: 1.5vw;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.button {
+  position: absolute;
+  outline: ;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200px;
+  font-size: 2vw;
+}
+
+.message {
+  font-size: 2px;
+  color: #fff;
+  text-align: center;
+}
