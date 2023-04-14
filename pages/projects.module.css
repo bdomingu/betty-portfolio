@@ -114,3 +114,9 @@
 	transform: translateY(0px);
 	transition-delay: 0.9s;
 }
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

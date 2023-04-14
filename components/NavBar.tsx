@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './NavBar.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 interface NavItem {
     label: string;
     href: string;
 }
-
 
 
 export default function NavBar() {
@@ -29,7 +27,11 @@ export default function NavBar() {
             height={50}/></a>
         </div>
         <button className={styles.menuButton} onClick={handleClick}>
-          <span className={styles.hamburgerIcon}><FontAwesomeIcon icon={faBars} size='2xl'/></span>
+          <div className={styles.hamburgerIcon}>
+            <span className="material-symbols-outlined">
+              menu
+            </span>
+          </div>
         </button>
         
         <ul className={showMenu ? styles.menuListActive : styles.menuList}>
