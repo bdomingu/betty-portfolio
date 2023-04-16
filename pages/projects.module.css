@@ -9,6 +9,20 @@
     
 }
 
+.title {
+	text-align: center;
+	align-items: center;
+	margin-top: -35px;
+}
+
+.title h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 3em;
+	font-weight: 700;
+	color: #CCABA2;
+
+}
+
 .box {
 	position: relative;
 	width: 280px;
@@ -57,15 +71,23 @@
 }
 
 .content h2 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 1.5em;
 	margin: 0;
 	padding: 0;
     color: #CCABA2;
 }
 
 .content p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
     color: #fff;
 }
 .readMore {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 	text-decoration: none;
 	border: 1px solid #7a2f44;
 	color: #fff;
@@ -74,6 +96,8 @@
 }
 
 .repository {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 	text-decoration: none;
 	border: 1px solid #7a2f44;
 	color: #fff;

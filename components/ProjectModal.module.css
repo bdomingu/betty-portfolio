@@ -40,6 +40,8 @@
 
   .image {
     max-width: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .image img{
@@ -92,29 +94,60 @@
  }
 
  .purpose {
-    color: #CCABA2;
+   margin-left: 30px;
+   margin-right: 30px;
+ }
+
+ .purpose h3 {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1em;
+   font-weight: 600;
+   color: #7a2f44;
  }
 
  .purpose p {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1em;
+   font-weight: 300;
     color: #fff;
  }
 
  .problems {
-    color: #CCABA2;
+   margin-left: 30px;
+   margin-right: 30px;
+ }
+
+ .problems h3 {
+   color: #7a2f44;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1em;
+   font-weight: 600;
  }
 
  .problems p {
     color: #fff;
-
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
  }
 
  .lessons {
-    color: #CCABA2;
+   margin-left: 30px;
+   margin-right: 30px;
+ }
+
+ .lessons h3 {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1em;
+   font-weight: 600;
+   color: #7a2f44;
  }
 
  .lessons p {
     color: #fff;
-
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
  }
 
  @media only screen and (max-width: 870px) {

@@ -44,7 +44,9 @@ export default function Projects() {
 
     return (
     <Layout>
+        <div className={styles.title}>
         <h1>My Projects</h1>
+        </div>
         <div className={styles.container}>
             {projectsData.map((project) => (
                    <div className={styles.box}>

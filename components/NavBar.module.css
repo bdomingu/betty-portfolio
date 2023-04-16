@@ -12,9 +12,10 @@
 
 .hamburgerIcon {
   color: #CCABA2;
+  margin-left: -15px;
   margin-top: -200%;
   height: 3px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .hamburgerIcon::before,
@@ -58,25 +59,25 @@
 .navContainer{
   width: 20%;
   margin:0 auto;
-  
   display:flex;
   flex-direction: column;
 }
 
 .navContainer li{
   list-style:none;
-  /* margin:0 20px; */
   transition:0.5s;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
 }
 
 .navContainer li a{
-  /* display: block; */
+  font-family: 'Roboto', sans-serif;
   position:relative;
   text-decoration:none;
   padding:5px;
-  font-size:18px;
-  font-family: sans-serif;
-  color:#fff;
+  font-size:1em;
+  font-weight: 400;
+  color:#CCABA2;
   text-transform:uppercase;
   transition:0.5s;
 }
@@ -135,7 +136,7 @@
     position: relative;
     flex-direction: row;
     top:-50px;
-    left:75%;
+    left:72%;
     align-items: center;
     padding-top: 20px; /* adjust as needed */
  
@@ -143,8 +144,8 @@
   
   .navContainer li{
     list-style:none;
-    /* margin:0 20px; */
     transition:0.5s;
+    padding: 0;
   }
   
   .navContainer li a{
@@ -153,7 +154,9 @@
     text-decoration:none;
     padding:5px;
     font-size:1vw;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1em;
     color:#CCABA2;
     text-transform:uppercase;
     transition:0.5s;

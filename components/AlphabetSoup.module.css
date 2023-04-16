@@ -14,6 +14,7 @@
 }
   
   .letter {
+    font-family: 'Roboto', sans-serif;
     display:inline-block;
     margin: 0 0.5vw;
     transition: transform 0.5s ease-out;
@@ -34,14 +35,17 @@
 .message{
   width: 50%;
   margin: 0 auto;
-  font-size: 2vw;
+  font-size: 2em;
+  font-size: 2px;
+  color: #fff;
+  text-align: center;
 }
 
 
 .name{
   color: #CCABA2;
   position: absolute;
-  font-size: 5.5vw;
+  font-size: 30em;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -50,8 +54,8 @@
 .title{
   color: #fff;
   position: absolute;
-  font-size: 2.5vw;
-  top: 25%;
+  font-size: 15em;
+  top: 22%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -59,23 +63,22 @@
 .welcome {
   color: #CCABA2;
   position: absolute;
-  font-size: 1.5vw;
-  top: 35%;
+  font-size: 10em;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .button {
+  background: none;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 200px;
   font-size: 2vw;
+  cursor: pointer;
+  color: #CCABA2;
+
 }
 
-.message {
-  font-size: 2px;
-  color: #fff;
-  text-align: center;
-}

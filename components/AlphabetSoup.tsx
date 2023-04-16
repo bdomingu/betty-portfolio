@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from './AlphabetSoup.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightLong } from '@fortawesome/free-solid-svg-icons';
+
 
 type Message = {
   name: string;
@@ -102,13 +105,13 @@ const AlphabetSoup = () => {
           <h2 className={styles.title}>{message.title}</h2>
           <h2 className={styles.welcome}>{message.message}</h2>
         </div>
-        <button
+        <a
         className={styles.button}
          onClick={() => {
           generateNewMessage();
           scatterLetters();
-        }}> scatter
-        </button>
+        }}> <FontAwesomeIcon icon={faRightLong} size="2x"></FontAwesomeIcon>
+        </a>
         <ul className={styles.elementList}>
           {letters.map(letter => (
             <li key={`letter-${letter}`} className={`${styles.letter}`}>{letter}</li>
