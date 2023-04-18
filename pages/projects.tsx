@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import Layout from "@/components/Layout";
 import styles from './projects.module.css'
 import Modal from '@/components/ProjectModal';
@@ -15,6 +15,7 @@ interface Project {
     purpose: string,
     problems: string,
     lessonsLearned: string,
+    repository: string
 }
 
 export default function Projects() {
@@ -29,18 +30,31 @@ export default function Projects() {
         image: '',
         purpose: '',
         problems: '',
-        lessonsLearned: ''
+        lessonsLearned: '',
+        repository: ''
       });
 
+      useEffect(() => {
+        const storedProjectId = localStorage.getItem('selectedProjectId');
+        if (storedProjectId) {
+            const project = projectsData.find(p => p.id === Number(storedProjectId));
+            if (project) {
+                setSelectedProject(project);
+                setShowModal(true);
+            }
+        }
+    }, []);
+
     const onRequestClose = () => {
+        localStorage.removeItem('selectedProjectId');
         setShowModal(false)
     }
 
     const handleClick = (project: Project) => {
+        localStorage.setItem('selectedProjectId', String(project.id));
         setSelectedProject(project);
         setShowModal(true);
     }
-
 
     return (
     <Layout>
@@ -57,7 +71,7 @@ export default function Projects() {
                        <h2>{project.title}</h2>
                        <p>{project.shortSummary}</p>
                        <a className={styles.readMore} onClick={() => handleClick(project)}>Read More</a>
-                       <a className={styles.repository} href="https://github.com/bdomingu/Weather-Site">Repository</a>
+                       <a className={styles.repository} href={project.repository}>Repository</a>
                   </div>
                </div>
             ))}

@@ -1,5 +1,7 @@
 import ReactModal from "react-modal";
 import styles from './ProjectModal.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 interface Project {
     id: number,
@@ -12,6 +14,7 @@ interface Project {
     purpose: string,
     problems: string,
     lessonsLearned: string,
+    repository: string
 }
 
 ReactModal.setAppElement('#__next');
@@ -35,7 +38,10 @@ export default function ProjectModal({showModal, onRequestClose, selectedProject
         </a>
          <div className={styles.container}>
             <div className={styles.title}>
-                <h1>{selectedProject.title}</h1>
+                <h1>{selectedProject.title}
+                <a href={selectedProject.repository}>
+                <FontAwesomeIcon icon={faGithub} size="1x"></FontAwesomeIcon></a>
+                </h1>
                 <p>{selectedProject.summary}</p>
             </div>
             <div className={styles.stack}>
@@ -56,7 +62,7 @@ export default function ProjectModal({showModal, onRequestClose, selectedProject
                 <p>{selectedProject.problems}</p>
             </div>
             <div className={styles.lessons}>
-                <h3>Lessons learned</h3>
+                <h3>What I learned</h3>
                 <p>{selectedProject.lessonsLearned}</p>
             </div>
         </div>

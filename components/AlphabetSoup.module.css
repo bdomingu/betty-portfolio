@@ -57,15 +57,17 @@
   font-size: 15em;
   top: 22%;
   left: 50%;
+  width: 50%;
   transform: translate(-50%, -50%);
 }
 
 .welcome {
   color: #CCABA2;
   position: absolute;
-  font-size: 10em;
+  font-size: 10.8em;
   top: 30%;
   left: 50%;
+  width: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -76,9 +78,38 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 200px;
-  font-size: 2vw;
+  font-size: 2em;
   cursor: pointer;
   color: #CCABA2;
-
 }
 
+.button:hover{
+  color: #7a2f44;
+}
+
+
+@media only screen and (max-width:900px) {
+  .name{
+    top: 20%; 
+  }
+
+
+  .title{
+    top: 36%;
+    width: 85%;
+  }
+
+  .welcome {
+    top: 45%; 
+    width: 80%;
+  }
+  
+  .button {
+    top: 55%;
+  }
+
+  .socials{
+    padding-top: 400px;
+  }
+
+}

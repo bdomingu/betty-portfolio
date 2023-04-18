@@ -56,10 +56,16 @@
     font-size: 2em;
     text-align: center;
     color: #7a2f44;
+    
+ }
+
+ .title a {
+  color: #CCABA2;
+  padding-left: 20px;
  }
 
  .title p{
-    font-size: 1em;
+    font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     padding: 0px;
@@ -69,16 +75,16 @@
  }
 
  .stack {
-    padding: 20px;
+    margin-top: -25px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
-    padding-top: 5px;
-    /* width: 50%; */
-    margin: 25px;
+    margin-bottom: 50px;
+  
  }
 
  .stack h3 {
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #CCABA2;
@@ -87,7 +93,7 @@
  }
 
  .stack li {
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #fff;
@@ -100,16 +106,18 @@
 
  .purpose h3 {
    font-family: 'Roboto', sans-serif;
-   font-size: 1em;
+   font-size: 1.5em;
    font-weight: 600;
    color: #7a2f44;
+   text-decoration: underline;
  }
 
  .purpose p {
    font-family: 'Roboto', sans-serif;
-   font-size: 1em;
+   font-size: 1.3em;
    font-weight: 300;
-    color: #fff;
+   color: #fff;
+   margin-top:-20px;
  }
 
  .problems {
@@ -118,17 +126,19 @@
  }
 
  .problems h3 {
-   color: #7a2f44;
+   color: rgb(122, 47, 68);
    font-family: 'Roboto', sans-serif;
-   font-size: 1em;
+   font-size: 1.5em;
    font-weight: 600;
+   text-decoration: underline;
  }
 
  .problems p {
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 300;
+    margin-top:-20px;
  }
 
  .lessons {
@@ -138,16 +148,18 @@
 
  .lessons h3 {
    font-family: 'Roboto', sans-serif;
-   font-size: 1em;
+   font-size: 1.5em;
    font-weight: 600;
    color: #7a2f44;
+   text-decoration: underline;
  }
 
  .lessons p {
     color: #fff;
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 300;
+    margin-top:-20px;
  }
 
  @media only screen and (max-width: 870px) {
@@ -163,6 +175,23 @@
     }
 
     .stack {
-        margin:0;
+      margin-top: -35px;
+      margin-left: 15px;
     }
+
+    .purpose {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .problems {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .lessons {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+   
  }

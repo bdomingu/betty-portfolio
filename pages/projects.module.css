@@ -5,22 +5,35 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content:space-around;
-
-    
+	/* margin-top: -20px; */
 }
 
 .title {
 	text-align: center;
 	align-items: center;
-	margin-top: -35px;
+	margin-top: -60px;
 }
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .title h1 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 3em;
 	font-weight: 700;
 	color: #CCABA2;
-
+	text-shadow: 0 0 16px rgb(122, 47, 68 / 50%);
+	opacity: 0; 
+    animation-name: fadeIn; 
+    animation-duration: 1s; 
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards;
 }
 
 .box {
@@ -143,4 +156,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  @media only screen and (max-width:998px) {
+	.title {
+		margin-top: 10px;
+	}
   }

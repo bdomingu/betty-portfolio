@@ -8,6 +8,7 @@ export default function About() {
         <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
             <img src='/images/betty.jpg'/>
+            <div className={styles.overlay}>Beatriz Dominguez</div>
         </div>
         <div className={styles.textContainer}>
             <h1>About Me</h1>
@@ -25,19 +26,9 @@ export default function About() {
             <br></br>
             On my spare time, I enjoy sipping on a delightful cup of coffee, cuddling with my pups, and staying fit and healthy.
             </p>     
-            {/* <Link href="/projects" className={styles.arrowLink}>
-            <div className={styles.arrowButtonText}>Check out my Resume</div>
-            <div className={styles.arrowButton}>
-                <img src="/images/arrow.png"/>
-            </div>
             
-            </Link> */}
         </div>
         
-            
-            
-      
-
         </div>
          
         </Layout>

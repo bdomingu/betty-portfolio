@@ -3,8 +3,11 @@ import Link from 'next/link';
 import styles from './NavBar.module.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 
 config.autoAddCss = false;
 
@@ -19,30 +22,41 @@ export default function NavBar() {
     return (
       <nav className={styles.nav}>
         <div className={styles.logoContainer}>
-          <a href="/">
+          <Link href="/">
             <img 
-            className={styles.logo} 
             src='/images/initials.png' alt="Logo"
-            width={150}
-            height={50}/></a>
+            /></Link>
         </div>
+   
         <button className={styles.menuButton} onClick={handleClick}>
-          <div className={styles.hamburgerIcon}>
-            <FontAwesomeIcon icon={faBars} size='2x'></FontAwesomeIcon>
+          {showMenu ? (
+             <div className={styles.hamburgerIcon}>
+             <FontAwesomeIcon icon={faX} size='2xl'></FontAwesomeIcon>
+           </div>
+          ) : (
+            <div className={styles.hamburgerIcon}>
+            <FontAwesomeIcon icon={faBars} size='2xl'></FontAwesomeIcon>
           </div>
-        </button>
+          )}
         
+        </button>
+      
         <ul className={showMenu ? styles.menuListActive : styles.menuList}>
         <div className={styles.navContainer}>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/projects">Projects</Link></li>          
           <li><Link href="/sdResume.pdf" target="_blank">Resume</Link></li> 
-          <li><Link href="/contact">Contact</Link></li>          
-         
+          <li>
+            <a href="https://github.com/bdomingu">
+            <FontAwesomeIcon icon={faGithub} size="xl"></FontAwesomeIcon>
+            </a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/b-dominguez/"><FontAwesomeIcon icon={faLinkedinIn} size="xl"></FontAwesomeIcon></a>        
+          </li>
       </div>
         </ul>
         
-        
+     
       
       </nav>
     );
