@@ -63,7 +63,7 @@ export default function Projects() {
         </div>
         <div className={styles.container}>
             {projectsData.map((project) => (
-                   <div className={styles.box}>
+                   <div className={styles.box} key={project.id}>
                    <div className={styles.imgBox}>
                        <img src={project.thumbnail}/>
                    </div>

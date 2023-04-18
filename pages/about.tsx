@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import Link from "next/link";
 import styles from './about.module.css'
 
 export default function About() {

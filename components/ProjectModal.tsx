@@ -46,8 +46,8 @@ export default function ProjectModal({showModal, onRequestClose, selectedProject
             </div>
             <div className={styles.stack}>
                 <h3 >Stack</h3>
-                {selectedProject?.stack.map((item) => (
-                <li>{item}</li>
+                {selectedProject?.stack.map((item, index) => (
+                <li key={index}>{item}</li>
                 ))}
             </div>
             <div className={styles.image}>

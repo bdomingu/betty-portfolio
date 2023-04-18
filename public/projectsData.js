@@ -86,7 +86,7 @@ const projectsData = [
                    dynamically as the user scrolled through the results. This not only improved the user experience by reducing the need for manual \
                    pagination, but also helped optimize the app's performance by reducing the amount of data that needed to be loaded at once. Overall \
                    this project helped me to improve my skills in front-end development and gain a deeper understanding of the importance of responsive \
-                   design and performance optimization.   ",
+                   design and performance optimization.",
       repository: "https://github.com/bdomingu/Movie-Search-Engine"
     },
 

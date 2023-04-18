@@ -38,7 +38,7 @@
   .textContainer p {
     font-family: 'Roboto', sans-serif;
     font-weight:400;
-    font-size: 1em;
+    font-size: 1.1em;
     margin-top: -10px;
     opacity: 0; /* Set the initial opacity to 0 */
     animation-name: fadeIn; /* Set the animation name */
@@ -138,10 +138,9 @@
     .textContainer {
       color: #CCABA2;
       width: auto;
-      padding-left: 2%;
       margin-top: 15px;
-      padding-left: 5%;
-      padding-right: 5%;
+      padding-left: 8%;
+      padding-right: 8%;
     }
 
     .textContainer h1 {
