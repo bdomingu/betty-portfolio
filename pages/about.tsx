@@ -11,8 +11,9 @@ export default function About() {
         </div>
         <div className={styles.textContainer}>
             <h1>About Me</h1>
-            <p>Hi, I'm Betty, a software developer with a background in Mathematics and Education.
-            My interest in software development began in college while pursuing my degree in mathematics. I took a programming class and I enjoyed the fact that I could build something and see it 
+            <p>Hi, I&apos;m Betty, a software developer with a background in Mathematics and Education.
+            My interest in software development began in college while pursuing my degree in mathematics. 
+            I took a programming class and I enjoyed the fact that I could build something and see it 
             right away. However, I was set on teaching young minds. 
             <br></br>
             <br></br>
