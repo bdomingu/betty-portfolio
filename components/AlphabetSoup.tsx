@@ -24,12 +24,12 @@ const AlphabetSoup = () => {
   });
   const [message, setMessage] = useState(originalMessage);
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.overflow = 'hidden';
+  //   return () => {
+  //     document.body.style.overflow = 'auto';
+  //   };
+  // }, []);
 
   const generateNewMessage = useCallback(() => {
  const quotes = [
@@ -55,8 +55,8 @@ const AlphabetSoup = () => {
     const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message) as NodeListOf<HTMLElement>;
     const delay = 50;
     elements.forEach((element, index) => {
-      const x = Math.random() * window.innerWidth * 1;
-      const y = Math.random() * window.innerHeight * 1;
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
       element.style.transform = `translate(${x}px, ${y}px)`;
       setTimeout(() => {
         element.style.transition = `transform 0.5s ease-out`;
@@ -76,13 +76,17 @@ const AlphabetSoup = () => {
 
   const scatterLetters = () => {
     const elements = document.querySelectorAll('.' + styles.letter + ', .' + styles.message ) as NodeListOf<HTMLElement>;
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
     elements.forEach((element) => {
       element.style.setProperty('--random-x', '0');
       element.style.setProperty('--random-y', '0');
-      const x = Math.random() * window.innerWidth * 1;
-      const y = Math.random() * window.innerHeight * 1;
-      element.style.setProperty('--random-x', `${x / window.innerWidth}`);
-      element.style.setProperty('--random-y', `${y / window.innerHeight}`);
+      const x = Math.random() * viewportWidth;
+      const y = Math.random() * viewportHeight;
+      const maxX = viewportWidth - element.offsetWidth;
+      const maxY = viewportHeight - element.offsetHeight;
+      element.style.setProperty('--random-x', `${Math.min(x, maxX) / viewportWidth}`);
+      element.style.setProperty('--random-y', `${Math.min(y, maxY) / viewportHeight}`);
       element.classList.add(styles.letterScattered);
     });
   };

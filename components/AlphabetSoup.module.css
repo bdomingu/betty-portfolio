@@ -15,11 +15,11 @@
   .letter {
     font-family: 'Roboto', sans-serif;
     display:inline-block;
-    margin: 0;
+    margin: 0 0.5vw;
     transition: transform 0.5s ease-out;
     color: #CCABA2;
     opacity: .4;
-    position: absolute;
+    position: fixed;
     font-size:1em;
     top: calc(var(--random-y) * 100%);
     left: calc(var(--random-x) * 100%);
