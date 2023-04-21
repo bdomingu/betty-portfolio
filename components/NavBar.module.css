@@ -45,7 +45,7 @@
 }
 
 .logoContainer {
-  margin-top:20px;
+  margin-top:40px;
   margin-left: 30px;
   max-width: 100%;
 }
@@ -138,7 +138,7 @@
     display:flex;
     position: relative;
     flex-direction: row;
-    top:-60px;
+    top:-50px;
     left:70%;
     align-items: center;
     padding-top: 10px;
