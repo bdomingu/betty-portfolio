@@ -22,16 +22,7 @@ export default function NavBar() {
   
     return (
       <nav className={styles.nav}>
-        <div className={styles.logoContainer}>
-          <Link href="/">
-            <Image 
-            src={'/images/initials.png'}
-            alt='Logo'
-            width={180}
-            height={47}
-            />
-            </Link>
-        </div>
+       
    
         <button className={styles.menuButton} onClick={handleClick}>
           {showMenu ? (
@@ -45,8 +36,19 @@ export default function NavBar() {
           )}
         
         </button>
-      
+        <div className={styles.flex}>
+        <div className={styles.logoContainer}>
+          <Link href="/">
+            <Image 
+            src={'/images/initials.png'}
+            alt='Logo'
+            width={180}
+            height={47}
+            />
+            </Link>
+        </div>
         <ul className={showMenu ? styles.menuListActive : styles.menuList}>
+      
         <div className={styles.navContainer}>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/projects">Projects</Link></li>          
@@ -61,7 +63,7 @@ export default function NavBar() {
       </div>
         </ul>
         
-     
+      </div>
       
       </nav>
     );
