@@ -22,7 +22,7 @@
   }
 
   .textContainer h1 {
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     margin-top: -10px;
     margin-bottom: 50px;
@@ -36,7 +36,7 @@
   }
   
   .textContainer p {
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-weight:400;
     font-size: 1.1em;
     margin-top: -10px;
@@ -71,7 +71,7 @@
     transition: .5s ease;
     opacity:0;
     color: white;
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     padding: 10px;
     text-align: center;

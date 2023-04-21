@@ -50,7 +50,7 @@
   }
 
  .title h1 {
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 2em;
     text-align: center;
@@ -64,7 +64,7 @@
 
  .title p{
     font-size: 1.5em;
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     padding: 0px;
     padding-left: 40px;
@@ -83,7 +83,7 @@
 
  .stack h3 {
     font-size: 1.2em;
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #CCABA2;
     position: relative;
@@ -92,7 +92,7 @@
 
  .stack li {
     font-size: 1.2em;
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #fff;
  }
@@ -103,16 +103,16 @@
  }
 
  .purpose h3 {
-  font-family: "'Roboto', 'sans-serif'";
-   font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
    font-weight: 600;
    color: #7a2f44;
    text-decoration: underline;
  }
 
  .purpose p {
-  font-family: "'Roboto', 'sans-serif'";
-   font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
    font-weight: 300;
    color: #fff;
    margin-top:-20px;
@@ -125,7 +125,7 @@
 
  .problems h3 {
    color: rgb(122, 47, 68);
-   font-family: "'Roboto', 'sans-serif'";
+   font-family: 'Roboto', sans-serif;
    font-size: 1.5em;
    font-weight: 600;
    text-decoration: underline;
@@ -133,7 +133,7 @@
 
  .problems p {
     color: #fff;
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     font-weight: 300;
     margin-top:-20px;
@@ -145,8 +145,8 @@
  }
 
  .lessons h3 {
-   font-family: "'Roboto', 'sans-serif'";
-   font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
    font-weight: 600;
    color: #7a2f44;
    text-decoration: underline;
@@ -154,7 +154,7 @@
 
  .lessons p {
     color: #fff;
-    font-family: "'Roboto', 'sans-serif'";
+    font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     font-weight: 300;
     margin-top:-20px;

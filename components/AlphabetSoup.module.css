@@ -9,19 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
-    height: 80vh;
+    height: auto;
 }
   
   .letter {
     font-family: 'Roboto', sans-serif;
     display:inline-block;
-    margin: 0 0.5vw;
+    margin: 0;
     transition: transform 0.5s ease-out;
     color: #CCABA2;
-    opacity: .5;
+    opacity: .4;
     position: absolute;
-    font-size:.5em;
+    font-size:1em;
     top: calc(var(--random-y) * 100%);
     left: calc(var(--random-x) * 100%);
 }
@@ -36,6 +35,7 @@
 
 
 .name{
+  font-family: 'Roboto', sans-serif;
   color: #CCABA2;
   position: absolute;
   font-size: 2em;
@@ -44,7 +44,8 @@
   transform: translate(-50%, -50%);
 }
 
-.title{
+.title {
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   position: absolute;
   font-size: 1em;
@@ -55,12 +56,14 @@
 }
 
 .welcome {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   color: #CCABA2;
   position: absolute;
-  font-size: .5em;
+  font-size: .8em;
   top: 30%;
   left: 50%;
-  width: 50%;
+  width: 55%;
   transform: translate(-50%, -50%);
 }
 
@@ -93,12 +96,12 @@
   }
 
   .welcome {
-    top: 45%; 
+    top: 48%; 
     width: 80%;
   }
   
   .button {
-    top: 55%;
+    top: 60%;
   }
 
   .socials{
