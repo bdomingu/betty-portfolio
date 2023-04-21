@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from './AlphabetSoup.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightLong } from '@fortawesome/free-solid-svg-icons';
@@ -31,7 +31,7 @@ const AlphabetSoup = () => {
     };
   }, []);
 
-  const generateNewMessage = () => {
+  const generateNewMessage = useCallback(() => {
  const quotes = [
     {
       name: '',
@@ -48,7 +48,7 @@ const AlphabetSoup = () => {
   if (message.isQuote) {
     setMessage(originalMessage);
   }
-};
+  }, [message, originalMessage] );
   
 
   useEffect(() => {
@@ -129,11 +129,3 @@ const AlphabetSoup = () => {
 export default AlphabetSoup;
 
 
-// const resetLetters = () => {
-  //   const letters = document.querySelectorAll('.' + styles.letter);
-
-  //   letters.forEach((letter) => {
-  //     letter.classList.remove(styles.letterScattered);
-  //   })
-  //   console.log('bye')
-  // }

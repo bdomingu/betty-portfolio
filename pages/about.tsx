@@ -1,12 +1,19 @@
 import Layout from "@/components/Layout";
-import styles from './about.module.css'
+import styles from './about.module.css';
+import Image from 'next/image';
+
 
 export default function About() {
     return (
         <Layout>
         <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
-            <img src='/images/betty.jpg'/>
+            <Image
+                src='/images/betty.jpg'
+                alt="profile-picture"
+                width={300}
+                height={500}
+            />
             <div className={styles.overlay}>Beatriz Dominguez</div>
         </div>
         <div className={styles.textContainer}>

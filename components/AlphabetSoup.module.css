@@ -21,22 +21,15 @@
     color: #CCABA2;
     opacity: .5;
     position: absolute;
-    font-size:1.5vw;
+    font-size:.5em;
     top: calc(var(--random-y) * 100%);
     left: calc(var(--random-x) * 100%);
-}
-  
-  .letterScattered {
-    animation: scatter 1s ease-out-in forwards;
-    transform: translate(var(--random-x), var(--random-y));
-    
 }
 
 .message{
   width: 50%;
   margin: 0 auto;
   font-size: 2em;
-  font-size: 2px;
   color: #fff;
   text-align: center;
 }
@@ -45,7 +38,7 @@
 .name{
   color: #CCABA2;
   position: absolute;
-  font-size: 30em;
+  font-size: 2em;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -54,7 +47,7 @@
 .title{
   color: #fff;
   position: absolute;
-  font-size: 15em;
+  font-size: 1em;
   top: 22%;
   left: 50%;
   width: 50%;
@@ -64,7 +57,7 @@
 .welcome {
   color: #CCABA2;
   position: absolute;
-  font-size: 10.8em;
+  font-size: .5em;
   top: 30%;
   left: 50%;
   width: 50%;

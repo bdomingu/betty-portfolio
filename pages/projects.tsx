@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import styles from './projects.module.css'
 import Modal from '@/components/ProjectModal';
 import projectsData from '../public/projectsData';
+import Image from 'next/image';
 
 interface Project {
     id: number,
@@ -65,7 +66,12 @@ export default function Projects() {
             {projectsData.map((project) => (
                    <div className={styles.box} key={project.id}>
                    <div className={styles.imgBox}>
-                       <img src={project.thumbnail}/>
+                        <Image
+                            src={project.thumbnail}
+                            alt='thumbnail'
+                            width={280}
+                            height={400}
+                        />
                    </div>
                    <div className={styles.content}>
                        <h2>{project.title}</h2>

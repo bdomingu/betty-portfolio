@@ -22,26 +22,26 @@
   }
 
   .textContainer h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "'Roboto', 'sans-serif'";
     font-weight: 500;
     margin-top: -10px;
     margin-bottom: 50px;
     font-size: 3em;  
     text-shadow: 0 0 16px rgb(122, 47, 68 / 50%);
     opacity: 0; 
-    animation-name: fadeIn; 
+    animation-name: fadeIn;
     animation-duration: 1s; 
     animation-delay: 0.5s; 
     animation-fill-mode: forwards;
   }
   
   .textContainer p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "'Roboto', 'sans-serif'";
     font-weight:400;
     font-size: 1.1em;
     margin-top: -10px;
-    opacity: 0; /* Set the initial opacity to 0 */
-    animation-name: fadeIn; /* Set the animation name */
+    opacity: 0; 
+    animation-name: fadeIn;
     animation-duration: 3s; 
     animation-delay: 0.5s; 
     animation-fill-mode: forwards;
@@ -71,7 +71,7 @@
     transition: .5s ease;
     opacity:0;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "'Roboto', 'sans-serif'";
     font-size: 20px;
     padding: 10px;
     text-align: center;

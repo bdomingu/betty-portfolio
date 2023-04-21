@@ -2,6 +2,7 @@ import ReactModal from "react-modal";
 import styles from './ProjectModal.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from "next/image";
 
 interface Project {
     id: number,
@@ -51,7 +52,12 @@ export default function ProjectModal({showModal, onRequestClose, selectedProject
                 ))}
             </div>
             <div className={styles.image}>
-                <img src={selectedProject.image} />
+                <Image
+                src={selectedProject.image}
+                alt="project-image"
+                width={647}
+                height={314}
+                />
             </div>
              <div className={styles.purpose}>
                 <h3>Project Purpose</h3>

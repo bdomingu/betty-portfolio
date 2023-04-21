@@ -45,7 +45,7 @@
 }
 
 .logoContainer {
-  margin-top:30px;
+  margin-top:20px;
   margin-left: 30px;
   max-width: 100%;
 }
@@ -66,12 +66,12 @@
 .navContainer li {
   list-style:none;
   transition:0.5s;
-  font-family: 'Roboto', sans-serif;
+  font-family: "'Roboto', 'sans-serif'";
   padding-bottom: 15px;
 }
 
 .navContainer li a{
-  font-family: 'Roboto', sans-serif;
+  font-family: "'Roboto', 'sans-serif'";
   position:relative;
   text-decoration:none;
   padding:5px;
@@ -138,7 +138,7 @@
     display:flex;
     position: relative;
     flex-direction: row;
-    top:-70px;
+    top:-60px;
     left:70%;
     align-items: center;
     padding-top: 10px;
@@ -157,7 +157,7 @@
     text-decoration:none;
     padding:8px;
     font-size:1vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: "'Roboto', 'sans-serif'";    
     font-weight: 500;
     font-size: 1.1em;
     color:#CCABA2;

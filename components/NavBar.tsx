@@ -8,6 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faX } from '@fortawesome/free-solid-svg-icons';
+import Image from 'next/image';
 
 config.autoAddCss = false;
 
@@ -23,9 +24,13 @@ export default function NavBar() {
       <nav className={styles.nav}>
         <div className={styles.logoContainer}>
           <Link href="/">
-            <img 
-            src='/images/initials.png' alt="Logo"
-            /></Link>
+            <Image 
+            src={'/images/initials.png'}
+            alt='Logo'
+            width={180}
+            height={47}
+            />
+            </Link>
         </div>
    
         <button className={styles.menuButton} onClick={handleClick}>
