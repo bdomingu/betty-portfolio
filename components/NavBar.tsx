@@ -54,11 +54,11 @@ export default function NavBar() {
           <li><Link href="/projects">Projects</Link></li>          
           <li><Link href="/sdResume.pdf" target="_blank">Resume</Link></li> 
           <li>
-            <a href="https://github.com/bdomingu">
+            <a className={styles.socials} href="https://github.com/bdomingu">
             <FontAwesomeIcon icon={faGithub} size="xl"></FontAwesomeIcon>
             </a>
           </li>
-          <li><a href="https://www.linkedin.com/in/b-dominguez/"><FontAwesomeIcon icon={faLinkedinIn} size="xl"></FontAwesomeIcon></a>        
+          <li><a className={styles.socials} href="https://www.linkedin.com/in/b-dominguez/"><FontAwesomeIcon icon={faLinkedinIn} size="xl"></FontAwesomeIcon></a>        
           </li>
       </div>
         </ul>

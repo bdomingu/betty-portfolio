@@ -44,9 +44,12 @@
 }
 
 .menuListActive {
-  display:block;
-
-   
+  display: inline-block;
+  position: fixed;
+  background-color: #101010;
+  width: 95%;
+  z-index: 2;
+  margin-top: 90px;
 }
 
 .logoContainer {
@@ -54,8 +57,6 @@
   margin-left: 30px;
   max-width: 100%;
 }
-
-
 
 .logoContainer img{
   width:180px;
@@ -124,7 +125,7 @@
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  
 }
 
 
@@ -136,10 +137,17 @@
   }
 
   .menuList {
+    margin-top: -10px;
     display: flex;
     justify-content:left;
   }
 
+  .menuListActive {
+    display: block;
+    margin-top: 0;
+
+  }
+  
   .navContainer {
     margin:0;
     padding:0;
@@ -168,6 +176,15 @@
     text-transform:uppercase;
     transition:0.5s;
   }
+
+  .socials {
+    margin-top: -6px;
+  }
+
+  .flex {
+    justify-content: space-between;  
+  }
+  
 
 }
 
